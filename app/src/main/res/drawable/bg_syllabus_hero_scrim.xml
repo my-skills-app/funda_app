@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!-- Full-bleed fade: black + subtle red so bottom edge never looks half-cut -->
+    <gradient
+        android:angle="270"
+        android:centerColor="#990A0608"
+        android:endColor="#F2100A0E"
+        android:startColor="#6609090F"
+        android:type="linear" />
+</shape>

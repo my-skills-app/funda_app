@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="20dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="4dp"
+            android:layout_height="22dp"
+            android:background="@drawable/bg_shimmer_line" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="0.62"
+            android:background="@drawable/bg_shimmer_line" />
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:paddingEnd="4dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <include layout="@layout/item_shimmer_home_shloka_card" />
+            <include layout="@layout/item_shimmer_home_shloka_card" />
+            <include layout="@layout/item_shimmer_home_shloka_card" />
+            <include layout="@layout/item_shimmer_home_shloka_card" />
+        </LinearLayout>
+    </HorizontalScrollView>
+</LinearLayout>

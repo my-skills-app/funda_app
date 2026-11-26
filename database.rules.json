@@ -1,0 +1,104 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+
+    "maintenance": {
+      ".read": true,
+      ".write": "auth != null && (auth.uid === 'dldcxUuFW9Qz00Vh7tBhgydn7qq2' || auth.token.email === 'hkumar91864@gmail.com')"
+    },
+
+    "video": {
+      ".read": true,
+      ".write": false
+    },
+
+    "Categories": {
+      ".read": true,
+      ".write": false,
+      "$category": {
+        "$seriesId": {
+          "sessions": {
+            ".read": true,
+            ".write": false
+          }
+        }
+      }
+    },
+
+    "Action": {
+      ".read": true,
+      ".write": false
+    },
+
+    "Adventure": {
+      ".read": true,
+      ".write": false
+    },
+
+    "db": {
+      ".read": true,
+      ".write": false
+    },
+
+    "users": {
+      ".read": "auth != null && (auth.uid === 'dldcxUuFW9Qz00Vh7tBhgydn7qq2' || auth.token.email === 'hkumar91864@gmail.com')",
+      "$uid": {
+        ".read": "$uid === auth.uid || (auth != null && (auth.uid === 'dldcxUuFW9Qz00Vh7tBhgydn7qq2' || auth.token.email === 'hkumar91864@gmail.com'))",
+        ".write": "$uid === auth.uid",
+        ".validate": "!newData.hasChild('password') && !newData.hasChild('pass')"
+      }
+    },
+
+    "watchlist": {
+      "$uid": {
+        ".read": "$uid === auth.uid",
+        ".write": "$uid === auth.uid"
+      }
+    },
+
+    "recent_watch": {
+      "$uid": {
+        ".read": "$uid === auth.uid",
+        ".write": "$uid === auth.uid"
+      }
+    },
+
+    "admin_config": {
+      ".read": "auth != null && (auth.uid === 'dldcxUuFW9Qz00Vh7tBhgydn7qq2' || auth.token.email === 'hkumar91864@gmail.com')",
+      ".write": "auth != null && (auth.uid === 'dldcxUuFW9Qz00Vh7tBhgydn7qq2' || auth.token.email === 'hkumar91864@gmail.com')"
+    },
+
+    "website_config": {
+      ".read": true,
+      ".write": "auth != null && (auth.uid === 'dldcxUuFW9Qz00Vh7tBhgydn7qq2' || auth.token.email === 'hkumar91864@gmail.com')"
+    },
+
+    "subscription_config": {
+      ".read": "auth != null",
+      ".write": "auth != null && (auth.uid === 'dldcxUuFW9Qz00Vh7tBhgydn7qq2' || auth.token.email === 'hkumar91864@gmail.com')"
+    },
+
+    "app_update_config": {
+      ".read": true,
+      ".write": "auth != null && (auth.uid === 'dldcxUuFW9Qz00Vh7tBhgydn7qq2' || auth.token.email === 'hkumar91864@gmail.com')"
+    },
+
+    "subscription_plans": {
+      ".read": "auth != null",
+      "$planId": {
+        ".read": "auth != null",
+        ".write": "auth != null && (auth.uid === 'dldcxUuFW9Qz00Vh7tBhgydn7qq2' || auth.token.email === 'hkumar91864@gmail.com')"
+      }
+    },
+
+    "push_broadcasts": {
+      ".read": "auth != null",
+      "$pushId": {
+        ".read": "auth != null",
+        ".write": "auth != null && (auth.uid === 'dldcxUuFW9Qz00Vh7tBhgydn7qq2' || auth.token.email === 'hkumar91864@gmail.com')",
+        ".validate": "newData.child('createdBy').val() === auth.uid"
+      }
+    }
+  }
+}

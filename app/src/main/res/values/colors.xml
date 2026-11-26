@@ -1,0 +1,49 @@
+<resources>
+    <color name="colorAccent">#FF4433</color>
+    <color name="colorPrimary">#100A0E</color>
+    <!--black-->
+    <color name="colorPrimaryDark">#100A0E</color>
+    <color name="colorControlHighlight">#100A0E</color>
+    <color name="colorControlNormal">#3E3E43</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="app_black">#09090F</color>
+    <color name="app_black_70">#B309090F</color>
+    <color name="app_black_90">#E609090F</color>
+    <color name="app_black_50">#8009090F</color>
+    <color name="app_black_30">#4D09090F</color>
+    <color name="app_black_2">#0509090F</color>
+    <color name="gray">#888888</color>
+    <color name="colorOverlay">#78ffffff</color>
+    <color name="text_black">#000</color>
+    <color name="bg">#80100a0e</color>
+    <color name="app_color">#F64136</color>
+    <color name="stroke_color_red">#A9201C</color>
+    <color name="app_color_50">#80F64136</color>
+    <color name="app_color_30">#4DF64136</color>
+    <!-- Dark black–red tones for home audio player accents -->
+    <color name="audio_player_red_dark_fill">#CC221614</color>
+    <color name="audio_player_red_dark_stroke">#B33D221E</color>
+    <color name="audio_player_red_dark_fill_soft">#B3281816</color>
+    <color name="nav_bar_blur">@color/app_black_30</color>
+    <color name="text_color">#DDDDDD</color>
+    <color name="text_color_10">#1ADDDDDD</color>
+    <color name="text_color_20">#33DDDDDD</color>
+    <color name="text_color_40">#66DDDDDD</color>
+    <color name="text_color_light">#7A7A7D</color>
+    <color name="text_color_hint">@color/text_color_20</color>
+    <!--<color name="view_bg_stroke_color">#555559</color>-->
+    <color name="et_stroke_color">#3E3E43</color>
+    <color name="edit_text_bg_color">#16161D</color>
+    <color name="view_bg_color">#333338</color>
+    <color name="seek_background">#A5A5A5</color>
+    <color name="trans_stroke_color">@color/text_color_20</color>
+    <color name="rating_yellow">#F5C518</color>
+    <color name="download_yellow">#F69036</color>
+    <color name="rating_yellow_shadow">#FAC401</color>
+    <color name="day_blue">#077AF3</color>
+    <color name="series_tab_muted">@color/text_color_light</color>
+    <!-- Deep cinematic dark-red (matches banner play / audio accents) -->
+    <color name="series_accent_dark">#8B1A1A</color>
+    <color name="series_accent_dark_stroke">#5C1010</color>
+</resources>

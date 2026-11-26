@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <ImageView
+        android:id="@+id/imgReelThumb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        android:scaleType="fitCenter"
+        tools:ignore="ContentDescription" />
+
+    <androidx.media3.ui.PlayerView
+        android:id="@+id/playerReel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        app:controller_layout_id="@layout/exoplayer_controller_reels"
+        app:hide_on_touch="true"
+        app:resize_mode="fit"
+        app:show_buffering="when_playing"
+        app:show_timeout="2500"
+        app:surface_type="texture_view"
+        app:use_controller="true" />
+</FrameLayout>

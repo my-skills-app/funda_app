@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#00000000"
+    android:padding="16dp">
+
+    <!-- Dark background -->
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/track_selection_dialog_tab_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:tabGravity="fill"
+        app:tabMode="fixed"
+        android:background="#1F1F1F"
+        
+        app:tabIndicatorColor="#BB86FC"
+        android:visibility="gone"
+        app:tabTextColor="#BBBBBB"
+        app:tabSelectedTextColor="#FFFFFF"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/track_selection_dialog_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#00000000" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:paddingTop="8dp">
+
+        <Button
+            android:id="@+id/track_selection_dialog_cancel_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@android:string/cancel"
+            android:textColor="#ffffff"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="12dp" />
+
+        <Button
+            android:id="@+id/track_selection_dialog_ok_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@android:string/ok"
+            android:textColor="#BB86FC"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="12dp"
+            android:layout_marginStart="16dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

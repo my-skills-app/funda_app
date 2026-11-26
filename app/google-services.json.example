@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "760116673421",
+    "firebase_url": "https://bhagwat-geeta-f7087-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "bhagwat-geeta-f7087",
+    "storage_bucket": "bhagwat-geeta-f7087.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:760116673421:android:c4023efe27c5d04d7bdbc4",
+        "android_client_info": {
+          "package_name": "com.chill.with.examsaathi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "760116673421-ANDROID_CLIENT.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.chill.with.examsaathi",
+            "certificate_hash": "YOUR_SHA1_WITHOUT_COLONS_LOWERCASE"
+          }
+        },
+        {
+          "client_id": "760116673421-il0ut64974j15j9kbqhgf0nmn57vsikj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "YOUR_FIREBASE_API_KEY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "760116673421-il0ut64974j15j9kbqhgf0nmn57vsikj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

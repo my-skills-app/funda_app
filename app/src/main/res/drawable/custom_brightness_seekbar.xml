@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- res/drawable/custom_brightness_seekbar.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Background line of the SeekBar -->
+    <item>
+        <shape android:shape="rectangle">
+            <size android:height="1dp" /> <!-- Thickness of the SeekBar -->
+            <solid android:color="#808080" /> <!-- Light gray background for SeekBar -->
+            <corners android:radius="10dp" /> <!-- Rounded corners for the background -->
+        </shape>
+    </item>
+
+    <!-- Progress bar -->
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape android:shape="rectangle">
+                <size android:height="1dp" /> <!-- Thickness of the SeekBar progress -->
+                <solid android:color="#FF4433" /> <!-- White color for progress (brightness level) -->
+                <corners android:radius="10dp" /> <!-- Rounded corners for the progress bar -->
+            </shape>
+        </clip>
+    </item>
+</layer-list>

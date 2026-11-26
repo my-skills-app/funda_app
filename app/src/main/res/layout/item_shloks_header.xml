@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="16dp"
+    android:paddingTop="56dp"
+    android:paddingEnd="16dp"
+    android:paddingBottom="12dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtSubjectsHeaderTitle"
+        android:fontFamily="@font/outfit_semi_bold"
+        android:text="@string/shloks_screen_title"
+        android:textColor="@color/text_color"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtShloksHeaderSubtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/outfit_regular"
+        android:text="@string/subjects_categories_subtitle"
+        android:textColor="@color/text_color_light"
+        android:textSize="14sp"
+        tools:text="Choose a category" />
+</LinearLayout>

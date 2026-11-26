@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    app:cardBackgroundColor="@android:color/transparent"
+    app:cardCornerRadius="18dp"
+    app:cardElevation="0dp">
+
+    <FrameLayout
+        android:id="@+id/fullAudioRoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_glass_card"
+        android:clipToOutline="true"
+        android:minHeight="228dp">
+
+        <FrameLayout
+            android:id="@+id/fullAudioMediaBackdrop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgFullAudioBackground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                tools:src="@color/view_bg_color" />
+
+            <View
+                android:id="@+id/viewFullAudioScrim"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_card_image_scrim" />
+        </FrameLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutFullAudioPlayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="228dp"
+            android:paddingStart="16dp"
+            android:paddingTop="14dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="16dp">
+
+            <LinearLayout
+                android:id="@+id/layoutFullAudioBadges"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/txtFullAudioChapterBadge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_home_audio_badge_chapter"
+                    android:clickable="true"
+                    android:contentDescription="@string/gita_audio_pick_chapter_title"
+                    android:drawableEnd="@drawable/ic_chevron_right"
+                    android:drawablePadding="4dp"
+                    android:drawableTint="@color/white"
+                    android:ellipsize="end"
+                    android:focusable="true"
+                    android:fontFamily="@font/outfit_semi_bold"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:paddingStart="12dp"
+                    android:paddingTop="6dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="6dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="11sp"
+                    tools:text="Chapter 1" />
+
+                <TextView
+                    android:id="@+id/txtFullAudioPositionBadge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/bg_home_audio_badge_position"
+                    android:clickable="true"
+                    android:contentDescription="@string/gita_audio_pick_shloka_title"
+                    android:drawableEnd="@drawable/ic_chevron_right"
+                    android:drawablePadding="4dp"
+                    android:drawableTint="@color/white"
+                    android:focusable="true"
+                    android:fontFamily="@font/outfit_semi_bold"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:minWidth="40dp"
+                    android:paddingStart="12dp"
+                    android:paddingTop="6dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="6dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="11sp"
+                    tools:text="1.1" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtFullAudioNowPlaying"
+                style="@style/GitaTextSectionTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:clickable="true"
+                android:contentDescription="@string/gita_audio_pick_shloka_title"
+                android:ellipsize="end"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:maxLines="2"
+                android:text="@string/play"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutFullAudioBadges"
+                tools:text="Shloka title" />
+
+            <TextView
+                android:id="@+id/txtFullAudioChapterLine"
+                style="@style/GitaTextSubtitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="2"
+                android:textAlignment="center"
+                android:textColor="#CCFFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtFullAudioNowPlaying"
+                tools:text="Chapter 1 – Arjuna Vishada Yoga" />
+
+            <TextView
+                android:id="@+id/txtFullAudioElapsed"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/outfit_medium"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="0:00"
+                android:textColor="#B3FFFFFF"
+                android:textSize="11sp"
+                app:layout_constraintBottom_toBottomOf="@+id/seekFullAudio"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/seekFullAudio" />
+
+            <SeekBar
+                android:id="@+id/seekFullAudio"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="6dp"
+                android:max="1000"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                android:progressDrawable="@drawable/seekbar_audio_track"
+                android:splitTrack="false"
+                android:thumb="@drawable/seekbar_audio_thumb"
+                android:thumbOffset="0dp"
+                app:layout_constraintEnd_toStartOf="@+id/txtFullAudioDuration"
+                app:layout_constraintStart_toEndOf="@+id/txtFullAudioElapsed"
+                app:layout_constraintTop_toBottomOf="@+id/txtFullAudioChapterLine" />
+
+            <TextView
+                android:id="@+id/txtFullAudioDuration"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/outfit_medium"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="0:00"
+                android:textColor="#B3FFFFFF"
+                android:textSize="11sp"
+                app:layout_constraintBottom_toBottomOf="@+id/seekFullAudio"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/seekFullAudio" />
+
+            <LinearLayout
+                android:id="@+id/layoutFullAudioControls"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/seekFullAudio"
+                app:layout_constraintVertical_bias="1">
+
+                <ImageButton
+                    android:id="@+id/btnFullAudioChapterPrev"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="@drawable/bg_home_audio_btn_glass"
+                    android:contentDescription="@string/gita_audio_previous_chapter"
+                    android:padding="10dp"
+                    android:scaleType="centerInside"
+                    android:src="@android:drawable/ic_media_previous"
+                    app:tint="@color/white" />
+
+                <FrameLayout
+                    android:id="@+id/layoutFullAudioPlaySlot"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp">
+
+                    <ImageButton
+                        android:id="@+id/btnFullAudioPlayPause"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_home_audio_btn_glass_primary"
+                        android:contentDescription="@string/play"
+                        android:padding="13dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_play_circle"
+                        android:stateListAnimator="@null"
+                        app:tint="@color/white" />
+
+                    <ProgressBar
+                        android:id="@+id/progressFullAudioBuffering"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_gravity="center"
+                        android:indeterminateTint="@color/white"
+                        android:visibility="gone"
+                        tools:visibility="visible" />
+                </FrameLayout>
+
+                <ImageButton
+                    android:id="@+id/btnFullAudioChapterNext"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="@drawable/bg_home_audio_btn_glass"
+                    android:contentDescription="@string/gita_audio_next_chapter"
+                    android:padding="10dp"
+                    android:scaleType="centerInside"
+                    android:src="@android:drawable/ic_media_next"
+                    app:tint="@color/white" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_glass_stroke_overlay_18" />
+
+    </FrameLayout>
+</androidx.cardview.widget.CardView>

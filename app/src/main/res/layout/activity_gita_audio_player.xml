@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_home_glass"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp">
+
+        <ImageView
+            android:id="@+id/btnAudioPlayerBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_toolbar_back_btn"
+            android:contentDescription="@string/back"
+            android:padding="11dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/arrow_back_24"
+            app:tint="@color/text_color" />
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="24dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/movie_poster_size"
+                android:layout_height="@dimen/movie_poster_size"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="0dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_glass_card">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/imgAudioPoster"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@null"
+                        android:scaleType="centerCrop"
+                        app:riv_border_color="#33FFFFFF"
+                        app:riv_border_width="1dp"
+                        app:riv_corner_radius="18dp"
+                        app:riv_oval="false"
+                        tools:src="@color/view_bg_color" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_movie_poster_scrim" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_glass_stroke_overlay" />
+                </FrameLayout>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtAudioChapterBadge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_home_audio_badge_chapter"
+                    android:clickable="true"
+                    android:contentDescription="@string/gita_audio_pick_chapter_title"
+                    android:drawableEnd="@drawable/ic_chevron_right"
+                    android:drawablePadding="4dp"
+                    android:drawableTint="@color/white"
+                    android:focusable="true"
+                    android:fontFamily="@font/outfit_semi_bold"
+                    android:gravity="center"
+                    android:paddingStart="12dp"
+                    android:paddingTop="6dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="6dp"
+                    android:textColor="@color/white"
+                    android:textSize="11sp"
+                    tools:text="Chapter 1" />
+
+                <TextView
+                    android:id="@+id/txtAudioPositionBadge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/bg_home_audio_badge_position"
+                    android:clickable="true"
+                    android:contentDescription="@string/gita_audio_pick_shloka_title"
+                    android:drawableEnd="@drawable/ic_chevron_right"
+                    android:drawablePadding="4dp"
+                    android:drawableTint="@color/white"
+                    android:focusable="true"
+                    android:fontFamily="@font/outfit_semi_bold"
+                    android:gravity="center"
+                    android:minWidth="40dp"
+                    android:paddingStart="12dp"
+                    android:paddingTop="6dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="6dp"
+                    android:textColor="@color/white"
+                    android:textSize="11sp"
+                    tools:text="1.1" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtAudioNowPlaying"
+                style="@style/GitaTextScreenTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:clickable="true"
+                android:contentDescription="@string/gita_audio_pick_shloka_title"
+                android:ellipsize="end"
+                android:focusable="true"
+                android:gravity="center"
+                android:maxLines="2"
+                android:textAlignment="center"
+                tools:text="Shloka title" />
+
+            <TextView
+                android:id="@+id/txtAudioChapterLine"
+                style="@style/GitaTextSubtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="2"
+                android:textAlignment="center"
+                android:textColor="@color/text_color_light"
+                tools:text="Chapter 1 – Arjuna Vishada Yoga" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtAudioElapsed"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/outfit_medium"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="0:00"
+                    android:textColor="@color/text_color_40"
+                    android:textSize="11sp" />
+
+                <SeekBar
+                    android:id="@+id/seekAudio"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:max="1000"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp"
+                    android:progressDrawable="@drawable/seekbar_audio_track"
+                    android:splitTrack="false"
+                    android:thumb="@drawable/seekbar_audio_thumb"
+                    android:thumbOffset="0dp" />
+
+                <TextView
+                    android:id="@+id/txtAudioDuration"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/outfit_medium"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="0:00"
+                    android:textColor="@color/text_color_40"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutAudioControls"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/btnAudioPrev"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_home_audio_btn_glass"
+                    android:contentDescription="@string/gita_audio_previous_shloka"
+                    android:padding="11dp"
+                    android:scaleType="centerInside"
+                    android:src="@android:drawable/ic_media_previous"
+                    app:tint="@color/text_color" />
+
+                <FrameLayout
+                    android:id="@+id/layoutAudioPlaySlot"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp">
+
+                    <ImageButton
+                        android:id="@+id/btnAudioPlayPause"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_home_audio_btn_glass_primary"
+                        android:contentDescription="@string/play"
+                        android:padding="14dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_play_circle"
+                        android:stateListAnimator="@null"
+                        app:tint="@color/white" />
+
+                    <ProgressBar
+                        android:id="@+id/progressAudioBuffering"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_gravity="center"
+                        android:indeterminateTint="@color/white"
+                        android:visibility="gone"
+                        tools:visibility="visible" />
+                </FrameLayout>
+
+                <ImageButton
+                    android:id="@+id/btnAudioNext"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_home_audio_btn_glass"
+                    android:contentDescription="@string/gita_audio_next_shloka"
+                    android:padding="11dp"
+                    android:scaleType="centerInside"
+                    android:src="@android:drawable/ic_media_next"
+                    app:tint="@color/text_color" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

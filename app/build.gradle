@@ -1,0 +1,93 @@
+plugins {
+	id 'com.android.application'
+	id 'com.google.gms.google-services'
+}
+
+def keystorePropertiesFile = rootProject.file('keystore.properties')
+def keystoreProperties = new Properties()
+if (keystorePropertiesFile.exists()) {
+	keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+}
+
+android {
+	compileSdk 34
+
+	useLibrary 'org.apache.http.legacy'
+
+	defaultConfig {
+		applicationId "com.chill.with.examsaathi"
+		namespace "com.chill.with.examsaathi"
+		minSdkVersion 23
+		targetSdkVersion 34
+		versionCode 2
+		versionName "2.3"
+	}
+
+	signingConfigs {
+		release {
+			if (keystorePropertiesFile.exists()) {
+				keyAlias keystoreProperties['keyAlias']
+				keyPassword keystoreProperties['keyPassword']
+				storeFile rootProject.file(keystoreProperties['storeFile'])
+				storePassword keystoreProperties['storePassword']
+			}
+		}
+	}
+
+	buildTypes {
+		release {
+			minifyEnabled true
+			shrinkResources true
+			debuggable false
+			proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+			if (keystorePropertiesFile.exists()) {
+				signingConfig signingConfigs.release
+			} else {
+				// Shareable sideload build when release keystore is not configured yet
+				signingConfig signingConfigs.debug
+			}
+		}
+		debug {
+			minifyEnabled false
+			debuggable true
+		}
+	}
+
+}
+
+dependencies {
+	implementation fileTree(dir: 'libs', include: ['*.jar'])
+	implementation 'androidx.appcompat:appcompat:1.7.1'
+	implementation 'androidx.fragment:fragment:1.8.5'
+	implementation 'androidx.viewpager:viewpager:1.0.0'
+	implementation 'androidx.viewpager2:viewpager2:1.1.0'
+	implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+	implementation 'com.facebook.shimmer:shimmer:0.5.0'
+	implementation 'androidx.cardview:cardview:1.0.0'
+	implementation 'com.google.android.material:material:1.12.0'
+	implementation platform('com.google.firebase:firebase-bom:34.1.0')
+	implementation 'com.google.firebase:firebase-auth'
+	implementation 'com.google.android.gms:play-services-auth:21.3.0'
+	implementation 'com.google.firebase:firebase-database'
+	implementation 'com.google.firebase:firebase-storage'
+	implementation 'com.google.firebase:firebase-messaging'
+	implementation 'com.github.bumptech.glide:glide:4.16.0'
+	annotationProcessor 'com.github.bumptech.glide:compiler:4.16.0'
+	implementation 'jp.wasabeef:glide-transformations:4.3.0'
+	implementation 'com.google.code.gson:gson:2.11.0'
+	implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+	implementation 'de.hdodenhof:circleimageview:3.1.0'
+	implementation 'com.airbnb.android:lottie:6.5.2'
+	implementation 'androidx.media3:media3-exoplayer:1.4.1'
+	implementation 'androidx.media3:media3-exoplayer-hls:1.4.1'
+	implementation 'androidx.media3:media3-ui:1.4.1'
+	implementation 'androidx.media3:media3-session:1.4.1'
+	implementation 'androidx.media3:media3-datasource:1.4.1'
+	implementation 'androidx.media3:media3-database:1.4.1'
+	implementation 'androidx.media:media:1.7.0'
+	implementation 'com.makeramen:roundedimageview:2.3.0'
+	implementation 'com.github.Dimezis:BlurView:version-2.0.4'
+	implementation 'com.github.SanojPunchihewa:GlowButton:1.0.1'
+	implementation 'com.github.iamBedant:OutlineTextView:1.0.5'
+	implementation 'me.mattak:outlined-text:0.0.1'
+}

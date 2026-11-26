@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    android:paddingBottom="20dp">
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_bottom_sheet_handle" />
+
+    <TextView
+        android:id="@+id/txtMoreVideosTitle"
+        style="@style/GitaTextSectionTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="4dp"
+        android:text="@string/player_more_videos"
+        android:textColor="@color/white"
+        tools:text="More Videos" />
+
+    <TextView
+        android:id="@+id/txtMoreVideosSubtitle"
+        style="@style/GitaTextSubtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="12dp"
+        android:textColor="@color/text_color_light"
+        tools:text="Chapter 6" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/text_color_20" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerMoreVideos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:maxHeight="360dp"
+        android:overScrollMode="never"
+        android:paddingTop="4dp"
+        tools:itemCount="4"
+        tools:listitem="@layout/item_player_queue_shloka" />
+</LinearLayout>

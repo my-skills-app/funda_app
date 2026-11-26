@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:clipChildren="false"
+    android:minHeight="340dp">
+
+    <ImageView
+        android:id="@+id/imgTrendingBg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="false"
+        android:scaleType="centerCrop"
+        tools:ignore="ContentDescription"
+        tools:src="@color/view_bg_color" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_gravity="top"
+        android:background="@drawable/bg_prep_trending_top_fade" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bg_prep_trending_bottom_fade" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="28dp"
+        android:paddingBottom="18dp">
+
+        <TextView
+            android:id="@+id/txtTrendingTag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/bg_prep_trending_chip"
+            android:paddingStart="10dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="4dp"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            tools:text="Trending Abhi" />
+
+        <TextView
+            android:id="@+id/txtTrendingTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            tools:text="Examiners ke favorite topics!" />
+
+        <TextView
+            android:id="@+id/txtTrendingSubtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:textColor="@color/text_color"
+            android:textSize="13sp"
+            tools:text="Galti se bhi miss mat kar dena!" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerTrending"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:clipToPadding="false"
+            android:nestedScrollingEnabled="false"
+            android:overScrollMode="never"
+            android:paddingStart="16dp"
+            android:paddingEnd="8dp" />
+    </LinearLayout>
+</FrameLayout>

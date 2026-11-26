@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "bhagwat-geeta-f7087"
+  },
+  "targets": {
+    "bhagwat-geeta-f7087": {
+      "database": {
+        "bhagwat-geeta-f7087-default-rtdb": [
+          "bhagwat-geeta-f7087-default-rtdb"
+        ]
+      }
+    }
+  }
+}

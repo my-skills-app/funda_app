@@ -1,0 +1,91 @@
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+	<androidx.appcompat.widget.LinearLayoutCompat
+		android:id="@+id/linear1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+		<androidx.cardview.widget.CardView
+			android:id="@+id/cardview1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			app:cardCornerRadius="10dp"
+			app:cardUseCompatPadding="true">
+			<FrameLayout
+				android:id="@+id/linear2"
+				android:layout_width="175dp"
+				android:layout_height="100dp"
+				android:orientation="vertical">
+				<androidx.constraintlayout.utils.widget.ImageFilterView
+					android:id="@+id/img"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:orientation="horizontal"
+					android:scaleType="centerCrop" />
+				<androidx.appcompat.widget.AppCompatImageView
+					android:id="@+id/linear4"
+					android:layout_width="35dp"
+					android:layout_height="35dp"
+					android:padding="10dp"
+					android:gravity="center_horizontal|center_vertical"
+					android:orientation="horizontal"
+					android:layout_gravity="center_horizontal|center_vertical"
+					android:background="@drawable/bg_round_rect_500"
+					android:backgroundTint="#27FDFDFD"
+					
+					android:src="@drawable/ic_play"
+					android:tint="@color/white"/> />
+				<ProgressBar
+					android:id="@+id/pb_player"
+					android:focusable="false"
+					android:layout_width="match_parent"
+					android:layout_height="4dp"
+					android:progress="50"
+					android:indeterminate="false"
+					style="?android:progressBarStyleHorizontal"
+					android:layout_gravity="bottom" />
+				<androidx.appcompat.widget.AppCompatImageView
+					android:id="@+id/iv_delete"
+					android:layout_width="30dp"
+					android:layout_height="30dp"
+					android:padding="10dp"
+					android:orientation="horizontal"
+					android:layout_gravity="end"
+					android:src="@drawable/ic_close"
+					android:tint="@color/white" />
+			</FrameLayout>
+		</androidx.cardview.widget.CardView>
+		<androidx.appcompat.widget.LinearLayoutCompat
+			android:id="@+id/linear6"
+			android:layout_width="175dp"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal"
+			android:orientation="horizontal"
+			android:layout_marginHorizontal="5dp">
+			<androidx.appcompat.widget.AppCompatTextView
+				android:id="@+id/textview1"
+				android:focusable="false"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="TextView"
+				android:textSize="14sp"
+				android:textColor="#FFFFFF"
+				android:layout_weight="1"
+				android:fontFamily="@font/outfit_medium"
+				android:maxLines="1" />
+			<androidx.appcompat.widget.AppCompatImageView
+				android:id="@+id/iv_info"
+				android:layout_width="24dp"
+				android:layout_height="24dp"
+				android:padding="1dp"
+				android:orientation="horizontal"
+				android:layout_marginStart="5dp"
+				android:src="@drawable/ic_info" />
+		</androidx.appcompat.widget.LinearLayoutCompat>
+	</androidx.appcompat.widget.LinearLayoutCompat>
+</LinearLayout>

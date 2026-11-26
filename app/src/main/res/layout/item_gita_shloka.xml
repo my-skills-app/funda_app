@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="156dp"
+    android:layout_height="236dp"
+    android:layout_marginEnd="12dp"
+    app:cardBackgroundColor="@android:color/transparent"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="0dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_glass_card"
+        android:clipToOutline="true">
+
+        <!-- Full-bleed image (top layout — image fills card) -->
+        <ImageView
+            android:id="@+id/imgShloka"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            tools:src="@color/view_bg_color" />
+
+        <!-- Glass scrim + text area at bottom -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/bg_card_image_scrim"
+            android:orientation="vertical"
+            android:paddingStart="10dp"
+            android:paddingTop="28dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="12dp">
+
+            <TextView
+                android:id="@+id/txtTitle"
+                style="@style/GitaTextCardTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                tools:text="Shloka 6.6" />
+
+            <TextView
+                android:id="@+id/txtDescription"
+                style="@style/GitaTextCardDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                tools:text="Mind is the best friend of one who has conquered it..." />
+        </LinearLayout>
+
+        <!-- Play icon -->
+        <ImageView
+            android:id="@+id/imgPlay"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="bottom|start"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="72dp"
+            android:background="@drawable/bg_glass_card"
+            android:contentDescription="@string/play"
+            android:padding="4dp"
+            android:src="@drawable/ic_play_circle" />
+
+        <!-- Glass border overlay -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_glass_stroke_overlay" />
+    </FrameLayout>
+</androidx.cardview.widget.CardView>

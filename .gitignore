@@ -1,0 +1,51 @@
+# Built application files
+*.apk
+*.ap_
+*.aab
+
+# Gradle
+.gradle/
+build/
+**/build/
+
+# Local configuration
+local.properties
+
+# Android Studio
+.idea/
+*.iml
+.DS_Store
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Keystores & signing (never commit)
+*.jks
+*.keystore
+keystore.properties
+key
+
+# Log/OS / crash dumps
+*.log
+*.hprof
+Thumbs.db
+build_output.txt
+
+# Firebase (add google-services.json locally; do not commit secrets)
+google-services.json
+*firebase-adminsdk*.json
+**/service-account.json
+
+# Node (Firebase CLI / tools — run npm install when needed)
+node_modules/
+tools/fcm/node_modules/
+functions/node_modules/
+
+# Cursor / local notes (not part of app)
+cursor_*.md
+
+# Local ADB / device pull artifacts
+adb_*.txt
+device_release.apk
+phone_installed_now.apk
+app/release/

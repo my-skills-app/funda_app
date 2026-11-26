@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="104dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="10dp"
+    android:orientation="vertical"
+    android:paddingBottom="2dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="104dp"
+        android:layout_height="138dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="0dp">
+
+        <ImageView
+            android:id="@+id/imgExampleThumb"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_series_example_thumb"
+            android:scaleType="centerCrop"
+            tools:ignore="ContentDescription" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/txtExampleLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/outfit_semi_bold"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:textColor="@color/app_color"
+        android:textSize="12sp"
+        tools:text="Example 1" />
+
+    <TextView
+        android:id="@+id/txtExampleTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/outfit_regular"
+        android:includeFontPadding="false"
+        android:maxLines="2"
+        android:textColor="@color/text_color"
+        android:textSize="12sp"
+        tools:text="First Gupta King with Maharajadhiraj" />
+</LinearLayout>

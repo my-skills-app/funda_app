@@ -1,0 +1,4 @@
+# Copy to local.properties (gitignored). Android Studio adds sdk.dir automatically.
+sdk.dir=C\:\\Users\\YourName\\AppData\\Local\\Android\\Sdk
+
+# ImgBB key is stored in Firebase RTDB: admin_config/imgbbApiKey (admin UID only).

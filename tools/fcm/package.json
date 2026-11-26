@@ -1,0 +1,12 @@
+{
+  "name": "bhagwat-geeta-fcm-sender",
+  "private": true,
+  "description": "Send FCM from Firebase Admin SDK (server-side only; never in the Android app)",
+  "scripts": {
+    "send:topic": "node send-push.js topic",
+    "send:token": "node send-push.js token"
+  },
+  "dependencies": {
+    "firebase-admin": "^13.4.0"
+  }
+}

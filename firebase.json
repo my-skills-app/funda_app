@@ -1,0 +1,36 @@
+{
+  "hosting": {
+    "public": "website",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "README.md"
+    ],
+    "redirects": [
+      {
+        "source": "/admin.html",
+        "destination": "/admin",
+        "type": 301
+      }
+    ],
+    "rewrites": [
+      {
+        "source": "/admin",
+        "destination": "/admin/index.html"
+      }
+    ]
+  },
+  "functions": {
+    "source": "functions"
+  },
+  "storage": {
+    "rules": "storage.rules"
+  },
+  "database": [
+    {
+      "target": "bhagwat-geeta-f7087-default-rtdb",
+      "rules": "database.rules.json"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "bhagwat-geeta-firebase",
+  "private": true,
+  "scripts": {
+    "firebase:login": "firebase login",
+    "firebase:deploy:functions": "firebase deploy --only functions --project bhagwat-geeta-f7087",
+    "firebase:deploy:rules": "firebase deploy --only database --project bhagwat-geeta-f7087",
+    "firebase:deploy:all": "firebase deploy --only functions,database --project bhagwat-geeta-f7087",
+    "fcm:send": "node tools/fcm/send-push.js topic"
+  },
+  "devDependencies": {
+    "firebase-tools": "^14.11.0"
+  }
+}

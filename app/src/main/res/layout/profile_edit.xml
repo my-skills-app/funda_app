@@ -1,0 +1,140 @@
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+	<LinearLayout
+		android:id="@+id/linear1"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:padding="8dp"
+		android:background="#100A0E"
+		android:gravity="center_horizontal"
+		android:orientation="vertical">
+		<LinearLayout
+			android:id="@+id/linear4"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="25dp"
+			android:padding="8dp"
+			android:gravity="center_horizontal|center_vertical"
+			android:orientation="horizontal">
+			<androidx.constraintlayout.utils.widget.ImageFilterView
+				android:id="@+id/back_btn"
+				android:layout_width="35dp"
+				android:layout_height="35dp"
+				android:padding="10dp"
+				android:src="@drawable/default_image"
+				android:background="@drawable/bg_for_view_round"
+				android:tint="@color/text_color" />
+			<TextView
+				android:id="@+id/textview1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginRight="40dp"
+				android:padding="8dp"
+				android:gravity="center_horizontal|center_vertical"
+				android:text="Edit Profile"
+				android:textSize="20sp"
+				android:textColor="#DDDDDD"
+				android:layout_weight="1"
+				android:fontFamily="@font/outfit_semi_bold" />
+		</LinearLayout>
+		<RelativeLayout
+			android:id="@+id/linear2"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="30dp"
+			android:gravity="center_horizontal"
+			android:orientation="horizontal">
+			<RelativeLayout
+				android:id="@+id/linear3"
+				android:layout_width="100dp"
+				android:layout_height="100dp"
+				android:orientation="vertical">
+				<androidx.constraintlayout.utils.widget.ImageFilterView
+					android:id="@+id/img_profile"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:orientation="horizontal"
+					android:layout_centerInParent="true"
+					android:scaleType="centerCrop"
+					app:roundPercent="1"
+					android:src="@color/text_color_light"
+					
+					android:background="@drawable/user" />
+				<ImageView
+					android:id="@+id/img_user"
+					android:layout_width="0dp"
+					android:layout_height="0dp"
+					android:layout_margin="20dp"
+					android:src="@drawable/default_image"
+					android:scaleType="center"
+					android:layout_centerInParent="true"
+					app:tint="@color/text_color" />
+				<androidx.constraintlayout.utils.widget.ImageFilterView
+					android:id="@+id/img_edit"
+					android:layout_width="30dp"
+					android:layout_height="30dp"
+					android:layout_margin="1dp"
+					android:padding="8dp"
+					android:orientation="horizontal"
+					android:layout_gravity="top"
+					android:layout_alignParentEnd="true"
+					android:layout_alignParentBottom="true"
+					android:background="@drawable/bg_for_select_pic"
+					
+					android:src="@drawable/ic_camera"
+					app:roundPercent="1"
+					app:tint="@color/text_color" />
+			</RelativeLayout>
+		</RelativeLayout>
+		<EditText
+			android:id="@+id/edittext1"
+			android:layout_width="match_parent"
+			android:layout_height="60dp"
+			android:layout_marginLeft="10dp"
+			android:layout_marginTop="40dp"
+			android:layout_marginRight="10dp"
+			android:paddingLeft="15dp"
+			android:paddingTop="8dp"
+			android:paddingRight="8dp"
+			android:paddingBottom="8dp"
+			android:textSize="16sp"
+			android:textColor="#DDDDDD"
+			android:hint="Full Name"
+			android:textColorHint="#3E3E43"
+			android:autofillHints="name"
+			android:background="@drawable/bg_for_edit_text_13"
+			android:fontFamily="@font/outfit_medium"
+			android:imeOptions="actionNext"
+			android:inputType="text"
+			android:maxLines="1"
+			android:paddingHorizontal="20dp"
+			android:singleLine="true" />
+		<LinearLayout
+			android:id="@+id/linear5"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:padding="8dp"
+			android:orientation="horizontal"
+			android:layout_weight="1" />
+		<TextView
+			android:id="@+id/btn_update"
+			android:layout_width="match_parent"
+			android:layout_height="60dp"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"
+			android:layout_marginBottom="60dp"
+			android:padding="8dp"
+			android:gravity="center_horizontal|center_vertical"
+			android:text="Update"
+			android:textSize="20sp"
+			android:textColor="#DDDDDD"
+			android:background="@drawable/bg_round_rect_15"
+			android:fontFamily="@font/outfit_medium"
+			android:backgroundTint="@color/app_color" />
+	</LinearLayout>
+</LinearLayout>
